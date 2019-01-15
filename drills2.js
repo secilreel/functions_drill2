@@ -23,7 +23,7 @@ function beyond(num){
 console.log(beyond(Infinity));
 
 function decode(string) {
-  const words=string.split(" ");
+  const words=string.split(' ');
   let resultArray = ''; 
   let step = '';
   for (let i=0; i<words.length; i++){
@@ -77,4 +77,28 @@ function daysInMonth(month, leapYear){
   } 
   return result;
 }
-console.log(daysInMonth('February',2020));
+console.log(daysInMonth('February',2018));
+
+function rockPaperScissor(num){
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+  let win;
+  switch(num) {
+  case num=randomNo:
+    win = 'There is a tie!';
+    break;
+  case num===1 && randomNo===3:
+  case num===3 && randomNo===2:
+  case num===2 && randomNo===1:
+    win = 'You beat me!';
+    break;
+  case randomNo===1 && num===3:
+  case randomNo===3 && num===2:
+  case randomNo===2 && num===1:
+    win = 'Haha! Gotcha!';
+    break;
+  default:
+    return 'Must provide a valid number';
+  }
+  return win;
+}
+console.log(rockPaperScissor(2));
