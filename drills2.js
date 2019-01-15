@@ -86,14 +86,14 @@ function rockPaperScissor(num){
   case num=randomNo:
     win = 'There is a tie!';
     break;
-  case num===1 && randomNo===3:
-  case num===3 && randomNo===2:
-  case num===2 && randomNo===1:
+  case 1 && randomNo===3:
+  case 3 && randomNo===2:
+  case 2 && randomNo===1:
     win = 'You beat me!';
     break;
-  case randomNo===1 && num===3:
-  case randomNo===3 && num===2:
-  case randomNo===2 && num===1:
+  case 3 && randomNo===1:
+  case 2 && randomNo===3:
+  case 1 && randomNo===2:
     win = 'Haha! Gotcha!';
     break;
   default:
